@@ -2,8 +2,12 @@
     - clear table 
     - generate a new random number
 
-- 3 inputs for number of people in group
+✅ 3 inputs for number of people in group
 - submit button
+   ✅ create on click 
+    ✅ grab input val
+    - check input against the server val 
+    - function check if high or low 
 - table that displays 
     - the round the guesses were made in
     - 3 guesses linked to the inputs from players
