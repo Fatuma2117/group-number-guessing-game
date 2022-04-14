@@ -4,6 +4,10 @@ function handleReady() {
   console.log("jquery is loaded!")
   $('#submitButton').on('click', acceptGuesses)
 }
+
+// grabs values of inputs on DOM
+// and generates new object guesses
+// runs "checkGuesses" against "guesses" (the new object)
 function acceptGuesses() {
   // console.log('You clicked me on the submit button!');
   let guesses = {
@@ -11,17 +15,17 @@ function acceptGuesses() {
     playerTwo: $('#pTwoInput').val(),
     playerThree: $('#pThreeInput').val()
   }
-  checkGuesses(guesses);
+  checkGuesses();
 }
 
+// Returns response form serverSideAccepter
 function checkGuesses() {
-$.ajax({
-  method: 'GET',
-  url: '/randomNumber'
-})
-.then(function(response){
- console.log(response);
-})
- 
-}
+  $.ajax({
+    method: 'GET',
+    url: '/winChecker'
+  })
+  .then(function(response){
+   console.log(response);
+  }) 
+  }
 

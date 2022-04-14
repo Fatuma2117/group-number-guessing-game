@@ -22,7 +22,28 @@ console.log('GET/randomNumber');
 res.send(tacocat.toString());
 })
 
+// loop thru guesses, check them against tacocat and 
+// return object(??) with 3 values indicating tacocat minus input value
+function serverSideChecker(guesses) {
+  $.ajax({
+    method: 'POST',
+    url: '/winChecker'    
+  })
+  .then(function(response){
+  //  console.log(response);
+  })  
+  }
 
+  // receives guesses from client side and feeds them into serverSideChecker
+function serverSideReceiver(guesses)
+$.ajax({
+  method: 'GET',
+  url: '/winChecker',
+  data: guesses
+})
+.then(function(response){
+//  console.log(response);
+})
 
 
 app.listen(PORT, () => {
