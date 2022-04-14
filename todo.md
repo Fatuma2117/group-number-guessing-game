@@ -1,7 +1,7 @@
 - at start of new game (or play again)    
     - clear table 
     - generate a new random number
-    
+
 - 3 inputs for number of people in group
 - submit button
 - table that displays 
@@ -17,5 +17,8 @@
     - highlight winner(s) with styling
     - generate play again button upon win
     - alert players to win
+    - append 'three' for 3
+
+
 
 
