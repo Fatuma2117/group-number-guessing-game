@@ -13,13 +13,13 @@ app.use(express.static('server/public'));
 
 // GET & POST Routes go here
 
-
+let tacocat = randomNumber(1, 25);
 
 
 
 app.get('/randomNumber',(req,res)=>{
-console.log('GET/randomNumber')
-res.send(randomNumber(1,25))
+console.log('GET/randomNumber');
+res.send(tacocat.toString());
 })
 
 

@@ -5,6 +5,7 @@ function handleReady() {
   $('#submitButton').on('click', acceptGuesses)
 }
 function acceptGuesses() {
+  // console.log('You clicked me on the submit button!');
   let guesses = {
     playerOne: $('#pOneInput').val(),
     playerTwo: $('#pTwoInput').val(),
@@ -14,6 +15,13 @@ function acceptGuesses() {
 }
 
 function checkGuesses() {
-$.aja
-
+$.ajax({
+  method: 'GET',
+  url: '/randomNumber'
+})
+.then(function(response){
+ console.log(response);
+})
+ 
 }
+
